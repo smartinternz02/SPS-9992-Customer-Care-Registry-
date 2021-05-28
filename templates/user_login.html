@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <title>User login</title>
+   <link href="static\css\style.css" type="text/css" rel="stylesheet"/>
+  </head>
+  <style>
+  body
+{
+ height: 100vh;
+ background-color:grey;
+ background-image: linear-gradient(to bottom right,darkcyan,darkslateblue);
+ background-repeat:no repeat;
+}
+#b
+{
+
+font-size:20px;
+}
+  </style>
+
+  <body>
+  <div class="a">
+          <a href="/"><img src="https://toppng.com/uploads/preview/home-icon-home-house-icon-house-icon-free-11553508857ouiuhg9nsa.png" width="50" height="50" /></a></div>
+    <br>
+    <br>
+    
+    <br>
+    <table id="abc" cellpadding="0px" cellspacing="5px" border="1 px solid black" align="center"  >
+     <tr>
+      <form name="user_login" method="post" action="/userlogin" align="center">
+      <td>
+       <table id="b" cellpadding="10px" cellspacing="5px" >
+        <tr>
+         <td  colspan="3" >
+         <strong><center>User login</center></strong>
+         </td>
+        </tr>
+        <tr>
+         <td> User name</td>
+         <td>:</td>
+         <td><input name="name" type="text" id="name"></td>
+        </tr>
+        <tr>
+         <td> Password</td>
+         <td>:</td>
+         <td><input name="password" type="password" id="password"></td>
+        </tr>
+        <tr >
+         <td  colspan="3" ><center>
+          <center><input name="login" type="submit" class="abc"  value="login" ></center>
+          <center><h6> <p>Don't have have a account? <a href="/signup">signup</a></h6> </center>
+          <center>{{msg}}</center>
+         </td>
+        </tr>
+       </table> 
+      </td>
+     </form>
+    </tr>
+   </table>
+  </body>
+</html>

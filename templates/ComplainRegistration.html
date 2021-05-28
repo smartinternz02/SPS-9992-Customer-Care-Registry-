@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <title>Complain Registration</title>
+   <link href="static\css\style.css" type="text/css" rel="stylesheet"/>
+  </head>
+  <style>
+  body
+{
+ height: 100vh;
+ background-color:white;
+ background-image: linear-gradient(to bottom ,mintcream,steelblue );
+ background-repeat:no repeat;
+}
+#b
+{
+
+font-size:20px;
+}
+#form
+{
+  margin-left : 75px;
+  margin-right:75px;
+  width: 300px;
+}
+
+	#form label{
+	    display: inline-block;
+		text-align: right;
+		float: left;
+	}
+
+	#form input{
+	    display: inline-block;
+		text-align: left;
+		float: right;
+	}
+#name
+{
+    
+    font-size:14pt;
+    border-radius: 25px;
+    border: 2px solid #000000;
+    padding: 20px;
+    width: 270px;
+    height: 4px;
+
+}
+#email
+{
+    
+    font-size:14pt;
+    
+    border-radius: 25px;
+    border: 2px solid #000000;
+    padding: 20px;
+    width: 270px;
+    height: 4px;
+}
+#mobile
+{
+    
+    font-size:14pt;
+    
+    border-radius: 25px;
+    border: 2px solid #000000;
+    padding: 20px;
+    width: 270px;
+    height: 4px;
+}
+#complaindescription
+{
+    
+    font-size:14pt;
+    
+    border-radius: 25px;
+    border: 2px solid #000000;
+    padding: 20px;
+    width: 270px;
+    height: 20px;
+}
+  </style>
+  <body>
+  <div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href  ="/" >Home</a>
+  <a href  ="/adminlogin" >Admin</a>
+  <a href  ="/ComplainRegistration">Complain Registration</a>
+  <a href="/track" >Track</a>
+  <a href="/logout" >Logout</a>
+</div>
+<button class="openbtn" onclick="openNav()">☰ </button> 
+
+ <br>
+   <br>
+    <table id="b" cellpadding="0px" cellspacing="5px" border="1 px solid black" align="center"  >
+     <tr>
+      <form name="ComplainRegistration" method="post" action="/ComplainRegistration" align="center">
+     
+      <td>
+       <strong><center> <label for="name">Complain Registration</label></center></strong><br>
+        <div id="form">
+        <center>
+        <label for="name">Name       </label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name" ><br><br><br><br>
+        <label for="email">Email          </label><br>
+        <input type="text" id="email" name="email" placeholder="Enter your email id" ><br><br><br><br>
+        <label for="mobile">Mobile        </label><br>
+        <input type="text" id="mobile" name="mobileno" placeholder="Enter your phone no." ><br><br><br><br>
+        <label for="complaindescription">complain description  </label><br>
+        <input type="text" id="complaindescription" name="complaindescription" placeholder="Give a brief on your complain"  ><br><br><br></center>
+        </div>
+        <center><input type="submit" align="center" class="abc" value="Submit"></center>
+
+          <center> {{msg}} </center><br>
+      </td>
+     </form>
+    </tr>
+   </table>
+
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+   </body>
+</html>

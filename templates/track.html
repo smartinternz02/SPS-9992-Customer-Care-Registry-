@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <title>track</title>
+   <link href="static\css\style.css" type="text/css" rel="stylesheet"/>
+  </head>
+  <style>
+  
+  body
+{
+   height: 100vh;
+   background-color:white;
+   background-image: linear-gradient(to bottom ,mintcream,steelblue );
+   background-repeat:no repeat;
+}
+.form
+{
+  font-size:20px;
+  margin-left:30px;
+
+}
+#ab
+{
+ backdrop-filter: blur(10px);
+font-size:20px;
+color:black;
+
+}
+.ab
+{
+ background-color: black;
+  border: 2px;
+  color: white;
+  padding: 5px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;s
+  cursor: pointer;
+}
+
+#complainId
+{
+  height: 25px;
+}
+#c
+{
+  margin-left:110px;
+  float:left;
+}
+  </style>
+  
+  <body bg-color="lightblue">
+   <div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="/" >Home</a>
+  <a href="/adminlogin" >Admin</a>
+  <a href="/ComplainRegistration">Complain Registration</a>
+  <a href="/track" >Track</a>
+  <a href="/logout" >Logout</a>
+</div>
+<button class="openbtn" onclick="openNav()">☰ </button> 
+  <table id="ab" cellpadding="0px" cellspacing="5px"  border="1 px solid black" align="center"  width="500px" >
+     <tr><td>
+  <h3><strong><center>TRACK</center></strong></h3>
+  <form method="post" action="/track" align="center" >
+   <label for="complainId" id="c">ComplainId    </label><br>
+        <input type="text" id="complainId" name="complainId" placeholder=" Enter your complain Id">
+        <input type="submit" align="center" class="ab" value="Track">
+         <h5> <center> {{account}} </center></h5></form>
+         
+        <hr>
+      
+      <form method="post" action="/feedback"  >   
+        
+  <div class="feedback">
+  <h3><strong><center>FEEDBACK</center></strong></h3>
+  <div class="form">
+     <lable for="agent">Agent :</lable>
+  <select name="agent" id="agent">
+        <option value="select">--select a Agent--</option>
+    <option value="john">John</option>
+    <option value="harry">Harry</option>
+    <option value="sam">Sam</option>
+    <option value="richard">Richard</option>
+    <option value="darren">Darren</option>
+  </select></div><br>
+  <div class="form">
+  <lable for="ratings"> Ratings  </lable>
+  <input type="radio" id="1" name="opt" value="1">
+  <label for="1">1</label>
+  <input type="radio" id="2" name="opt" value="2">
+  <label for="2">2</label>  
+  <input type="radio" id="3" name="opt" value="3">
+  <label for="3">3</label>
+   <input type="radio" id="4" name="opt" value="4">
+  <label for="4">4</label>
+  <input type="radio" id="5" name="opt" value="5">
+  <label for="5">5</label></div><br>
+  <div class="form">  
+  <lable for="comments">comment </lable>
+  <textarea name="comments"  id="comments" cols="30" rows="5" placeholder="please enter your feedback"></textarea></div><br>
+  <center><input type="submit" class="abc" value="Submit"><br>
+  {{msg}}</center>
+  </td>
+  
+  </tr>
+  </table>
+  </form>
+  </div>
+  
+  
+  <script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+  </body>
+  </html>
+  

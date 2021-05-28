@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <title>progess</title>
+   <link href="static\css\style.css" type="text/css" rel="stylesheet"/>
+  </head>
+  <style>
+  body
+{
+   height: 100vh;
+ background-color:white;
+ background-image: linear-gradient(to bottom ,mintcream,steelblue );
+ background-repeat:no repeat;
+}
+#progress
+{
+  margin-left:100px;
+}
+  </style>
+  <body>
+  <div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href  ="/" >Home</a>
+  <a href  ="/dashboard">Dashboard</a>
+  <a href="/admin" >Assign Agent</a>
+  <a href="/progress" >Progress</a>
+  <a href="/logout">logout</a>
+</div>
+<button class="openbtn" onclick="openNav()">☰ </button> 
+
+ <br>
+   <br>
+   <table id="abc" cellpadding="0px" cellspacing="5px" border="1 px solid black" width="400px" height="300px" align="center"  >
+     <tr>
+      <form name="admin" method="post" action="/progress" align="center">
+        
+      <td>
+       <table  cellpadding="10px" cellspacing="5px" >
+        <tr>
+         <td  colspan="2" >
+        <strong><center> <label for="progress">PROGRESS</label></centr></strong><br><br>
+         </td>
+        </tr>
+       <tr>
+       <td><label for="name">complainId </label></td>
+        <td><input type="text" id="complainId" name="complainId" ></td>
+        <tr>
+        <td  colspan="2" ><input type="radio" id="progress" name="progress" value="agent assigned">
+        <label for="agentassign"> Agent assigned</label></td>
+        </tr>
+        <tr>
+        <td  colspan="2" ><input type="radio" id="progress" name="progress" value="notified">
+        <label for="notified"> Notified</label></td>
+        </tr>
+        <tr>
+        <td  colspan="2" ><input type="radio" id="progress" name="progress" value="issue solved">
+        <label for="isssuesolved"> Isssue solved</label></td>
+        <tr>
+        <td  colspan="2" >
+        <input type="submit" class="abc" value="update"></td>
+        </tr>
+        </table>
+      </td>
+  <center>{{msg}}</center>
+</form>
+</tr>
+</table>
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+</body>
+</html>
+

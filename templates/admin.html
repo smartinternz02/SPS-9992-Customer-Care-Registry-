@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <title>Admin</title>
+   <link href="static\css\style.css" type="text/css" rel="stylesheet"/>
+  </head>
+  <style>
+  body
+{
+ height: 100vh;
+ background-color:white;
+ background-image: linear-gradient(to bottom ,mintcream,steelblue );
+ background-repeat:no repeat;
+}
+#admin
+{
+
+font-size:30px;
+}
+
+  </style>
+  <body>
+  <div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href  ="/" >Home</a>
+  <a href  ="/dashboard">Dashboard</a>
+  <a href="/progress" >Progress</a>
+  <a href="/logout" >Logout</a>
+</div>
+<button class="openbtn" onclick="openNav()">☰ </button> 
+
+ <br>
+   <br>
+    <table id="admin" cellpadding="0px" cellspacing="5px" border="1 px solid black" align="center"  >
+     <tr>
+      <form name="admin" method="post" action="/admin" align="center">
+     
+      <td>
+       <table  cellpadding="10px" cellspacing="5px" >
+        <tr>
+         <td  colspan="3" >
+         <strong><center>|ADMIN|</center></strong>
+         </td>
+        </tr>
+        <tr>
+         <td>Customer Name</td>
+         <td>:</td>
+         <td><input name="customername" type="text" id="customername"></td>
+        </tr>
+         <tr>
+         <td>Customer Id</td>
+         <td>:</td>
+         <td><input name="complainId" type="text" id="complainId"></td>
+        </tr>
+         <tr>
+         <td>E-mail Id</td>
+         <td>:</td>
+         <td><input name="email" type="text" id="email"></td>
+        </tr>
+        <tr>
+         <td> Complain Description</td>
+         <td>:</td>
+         <td><input name="complain" type="text" id="complain"></td>
+        </tr>
+        <tr>
+        <td>Agent</td>
+        <td>:</td>
+        <td><select name="agent" id="agent">
+        <option value="select">--select a Agent--</option>
+    <option value="john">John</option>
+    <option value="harry">Harry</option>
+    <option value="sam">Sam</option>
+    <option value="richard">Richard</option>
+    <option value="darren">Darren</option>
+  </select></td>
+        </tr>
+        <tr>
+         <td  colspan="3" >
+         <center><input name="submit" type="submit"  class="abc" value="ASSIGN" ></center>
+        <center> {{msg}}</center>
+         </td>
+        </tr>
+             
+       </table>
+      </td>
+     </form>
+    </tr>
+   </table>
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+</body>
+</html>

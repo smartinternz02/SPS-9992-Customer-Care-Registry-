@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <title>dashboard</title>
+   <link href="static\css\style.css" type="text/css" rel="stylesheet"/>
+  </head>
+  <style>
+   body
+  {
+   height: 100%;
+   background-color:white;
+   background-image: linear-gradient(to bottom ,mintcream,steelblue );
+   background-repeat:no repeat;
+   
+  }
+  </style>
+  <body>
+  <div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href  ="/" >Home</a>
+  <a href  ="/admin">assign agent</a>
+  <a href="/progress" >Progress</a>
+  <a href="/logout">logout</a>
+</div>
+<button class="openbtn" onclick="openNav()">☰ </button>
+<div>
+<h1><center><strong>ADMIN DASHBOARD</strong></center></h1>
+<br>
+<form name="dashboard" method="get" action="/admin" align="center">
+<table cellpadding="5px" cellspacing="5px" border="1 px solid black" align="center">
+<tr>
+<th>COMPLAIN ID</th>
+<th>COUSTOMER NAME</th>
+<th>E-MAIL</th>
+<th>COMPLAIN</th>
+<th>AGENT</th>
+</tr>
+{% for row in account %}
+<tr>
+<td>{{row.0}}</td>
+<td>{{row.1}}</td>
+<td>{{row.2}}</td>
+<td>{{row.4}}</td>
+<td><input type="submit" class="abc" value="ASSIGN AGENT">
+<a href="/delete/{{row.0}}" onclick="return confirm('Are you sure to delete')" class="abc">remove</a></td>
+</tr>
+{% endfor %}
+
+
+</table>
+</form>
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+
+
+</body>
+</html>

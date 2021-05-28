@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <title>signup</title>
+   <link href="/static/css/style.css" type="text/css" rel="stylesheet"/>
+   
+  </head>
+  <style>
+  body
+{
+background-image:url("https://i.pinimg.com/originals/de/d9/bf/ded9bfd8480627cb23133403b01241ed.png");
+  background-size:100% 100vh ;
+  background-position: top center;
+  
+  background-repeat: no-repeat;
+  position: relative;
+  backdrop-filter: blur(10px);
+   background-attachment: fixed;
+ 
+}
+#form
+{
+  margin-left : 75px;
+  margin-right:75px;
+  width: 300px;
+}
+
+	#form label{
+	    display: inline-block;
+		text-align: right;
+		float: left;
+	}
+
+	#form input{
+	    display: inline-block;
+		text-align: left;
+		float: right;
+	}
+#name
+{
+    
+    font-size:14pt;
+    border-radius: 25px;
+    border: 2px solid #000000;
+    padding: 20px;
+    width: 270px;
+    height: 4px;
+
+}
+#email
+{
+    
+    font-size:14pt;
+    
+    border-radius: 25px;
+    border: 2px solid #000000;
+    padding: 20px;
+    width: 270px;
+    height: 4px;
+}
+#mobile
+{
+    
+    font-size:14pt;
+    
+    border-radius: 25px;
+    border: 2px solid #000000;
+    padding: 20px;
+    width: 270px;
+    height: 4px;
+}
+#password
+{
+    
+    font-size:14pt;
+    
+    border-radius: 25px;
+    border: 2px solid #000000;
+    padding: 20px;
+    width: 270px;
+    height: 4px;
+}
+#ab
+{
+margin-top: 50px;
+font-size:20px;
+color:black;
+
+}
+a
+{
+  margin-left:10px;
+  
+}
+.a
+{
+  margin-top:10px;
+}
+
+
+  </style>
+  <body>
+     
+    <table id="ab"  border="1px solidblack" align="center" >
+    <div class="table">   
+     <tr>
+      <td>
+      <form name="signup" method="post" action="/signup"  >
+         <div class="a">
+          <a href="/"><img src="https://toppng.com/uploads/preview/home-icon-home-house-icon-house-icon-free-11553508857ouiuhg9nsa.png"  width="40" height="40" /></a></div>
+         <center> <img src="static\img\signup_logo.jpeg" width="100" height="100"/></center>
+        <strong><center> <label for="name">Signup</label></center></strong><br>
+        <div id="form">
+        <center>
+        <label for="name">Name       </label><br>
+        <input type="text" id="name" name="name" placeholder="enter your name" ><br><br><br>
+        <label for="email">Email          </label><br>
+        <input type="text" id="email" name="email" placeholder="enter your email id" ><br><br><br>
+        <label for="mobile">Mobile        </label><br>
+        <input type="text" id="mobile" name="mobile" placeholder="enter your phone no." ><br><br><br>
+        <label for="password">Password  </label><br>
+        <input type="password" id="password" name="password" placeholder="enter your password"  ><br><br><br></center>
+        </div>
+        <center><input type="submit" align="center" class="abc" value="Signup"></center>
+        <center><h6> <p>Already have an account? <a href="/userlogin">login</a></h6> </center> 
+          <center> {{msg}} </center><br>
+   </form>
+    </td>
+    
+    
+   </tr>
+   </div>
+  </table>
+
+ </body>
+</html>
+
